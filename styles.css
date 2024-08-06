@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.custom-radio {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .custom-radio {
+    background-color: #0056b3;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: buttonFadeIn 1.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+@keyframes buttonFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    animation: resultFadeIn 2s ease-in-out;
+}
+
+@keyframes resultFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+#aiChoice, #gameResult {
+    color: #007BFF;
+    font-weight: bold;
+}
